@@ -9,10 +9,10 @@
 
 #include <Servo.h>
 
-Servo myservo;  // create servo object to control a servo
-// twelve servo objects can be created on most boards
+Servo myservo; 
+
 int duration=0;
-int pos = 0;    // variable to store the servo position
+int pos = 0;    
 void setup() {
   pinMode(in1,OUTPUT);
   pinMode(in2,OUTPUT);
@@ -57,7 +57,7 @@ if(distance0<=50)
 for (pos = 90; pos <= 180; pos += 1) 
 { // goes from 0 degrees to 180 degrees
     // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    myservo.write(pos);              
     delay(15);
      
     
@@ -65,21 +65,21 @@ for (pos = 90; pos <= 180; pos += 1)
   }distance1=dist();
   for (pos = 180; pos >= 90; pos -=1) 
 { 
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    myservo.write(pos);              
     delay(15);
     
    // waits 15ms for the servo to reach the position
   }distance0=dist();
   for (pos = 90; pos >= 0; pos -=1) 
 { 
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    myservo.write(pos);              
     delay(15);
     
    // waits 15ms for the servo to reach the position
 }distance2=dist();
    for (pos = 0; pos <=90; pos+=1) { // goes from 180 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(15);                       // waits 15ms for the servo to reach the position
+    myservo.write(pos);              
+    delay(15);                       
    }
   if(distance0>60)
   {
