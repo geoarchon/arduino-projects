@@ -1,3 +1,5 @@
+//pin connections
+
 #define in1 4
 #define in2 5
 #define in3 6
