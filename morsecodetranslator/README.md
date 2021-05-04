@@ -1,0 +1,1 @@
+Code for a basic English to Morse Code translator. The input is taken in English, and the arrangement, consisting of an LED and buzzer, respectively blinks and rings the output in the form of Morse code.
