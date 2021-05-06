@@ -10,12 +10,22 @@ String a;
 
 void loop()
 {
+  Serial.println("Enter a sentence");
   while(Serial.available()) 
     a=Serial.readString();
   a.toLowerCase();  
   for(int i=0;i<a.length();i++)
   {
     char c=a.charAt(i);
+    translate(c);
+    delay(600);
+  }
+Serial.println(a);
+delay(7000);
+}
+
+void translate(char c)
+{
     // a dot is one unit
     // a dash is three units
     // the space between the parts of one letter is one unit
@@ -624,12 +634,6 @@ void loop()
       digitalWrite(beep,0);
     }
     
-    
     if(c==' ')    
       delay(1400);
-    delay(600);
-}
-Serial.println(a);
-Serial.println("Enter a sentence");
-delay(7000);
 }
